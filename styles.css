@@ -1,0 +1,115 @@
+body{
+    background: linear-gradient(#3cc0f0, #083d61, #f0ebeb40);
+    height: 100vh;
+    margin: 0;
+}
+
+.title {
+    background-color: #163a5e;
+    border: black solid 5px;
+    border-radius: 10px;
+}
+
+h1 {
+    justify-self: center;
+    color: #ffffff;
+    padding: 10px;
+    font-family: "Fira Sans", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.team-container {
+    width: 200px;
+    height: 300px;
+    color: #ffffff;
+    background: radial-gradient(transparent, transparent, #163a5e);
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    padding: 0;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+.center-button{
+    justify-self: center;
+}
+
+.btn {
+    color: #ffffff;
+    background: radial-gradient(midnightblue, blue);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: radial-gradient(black, blue, grey);
+    background-size: 180% 180%;
+    animation: button 2s infinite ease-in-out;
+}
+
+@keyframes button {
+    0% {
+        background-position: 0% 50%;
+      }
+    50% {
+        background-position: 100% 50%;
+      }
+    100% {
+        background-position: 0% 50%;
+      }
+}
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+    ;
+    align-items: center;
+}
+
+.team-entry {
+    width: 500px;
+    background-color: #163a5e;
+    border-radius: 10px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.member.name {
+    width: 75%;
+    justify-self: center;
+}
+
+.submit-btn {
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.team.list {
+    background: radial-gradient(transparent, transparent, #BCCCDC);
+    border-radius: 10px;
+}
+
+.glass {
+    border: none;
+    height: 2rem;
+    border-radius: 5px;
+    margin: 5px;
+    background: radial-gradient(#BCCCDC, transparent);
+}
