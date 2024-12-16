@@ -1,6 +1,13 @@
 //Old array: "Jimmy", "Hayley", "Jackie", "Mom", "Micheal", "Angela", "Victoria", "Brandon"
 function whoServes() {
-    team = submitMember();
+    team = [];
+
+    var teamArray = document.querySelectorAll(".member-input").length;
+
+    for (i = 0; i < teamArray; i++) {
+        var newTeam = document.querySelectorAll(".member-input")[i].textContent;
+        team.push(newTeam);
+    }
 
     var randomPick = Math.floor(Math.random() * team.length) + 1;
  
@@ -13,18 +20,9 @@ function whoServes() {
 }
 
 function submitMember() {
-    var teamMembers = []
 
-    for (var i = 1; i <= 10; i++) {
-        var getTeam = document.getElementById(`input${i}`).value;
-        teamMembers.push(getTeam);
-        if (teamMembers[i] === "") {
-            teamMembers.pop();
-        }
-        console.log(teamMembers);
-    }
+        var getTeam = document.getElementById("input").value;
 
+        newTeam = document.querySelector(".library-input").innerHTML += `<li class="member-input"> ${getTeam} </li>`;
 
-
-    return teamMembers;
 }

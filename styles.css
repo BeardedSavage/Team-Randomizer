@@ -1,13 +1,14 @@
-body{
-    background: linear-gradient(#3cc0f0, #083d61, #f0ebeb40);
+ body{
+    background-color:#3cc0f0;
     height: 100vh;
     margin: 0;
-}
+ }
 
 .title {
     background-color: #163a5e;
     border: black solid 5px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -72,10 +73,10 @@ h1 {
 
 .grid {
     height: 100vh;
+    background: no-repeat linear-gradient(#3cc0f0, #083d61, #f0ebeb40);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px
-    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
     align-items: center;
 }
 
@@ -86,9 +87,10 @@ h1 {
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: large;
+    font-size: x-large;
     color: #ffffff;
     padding: 5px;
+    justify-self:center;
 }
 
 .member.name {
@@ -112,4 +114,10 @@ h1 {
     border-radius: 5px;
     margin: 5px;
     background: radial-gradient(#BCCCDC, transparent);
+    font-size: large;
+}
+
+.library-input{
+    list-style: none;
+    justify-items: center;
 }
