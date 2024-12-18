@@ -1,30 +1,49 @@
-//Old array: "Jimmy", "Hayley", "Jackie", "Mom", "Micheal", "Angela", "Victoria", "Brandon"
-function whoServes() {
-    team = [];
+document.querySelector(".random").addEventListener("click", function(e) {
+    team = []
 
     var teamArray = document.querySelectorAll(".member-input").length;
 
-    for (i = 0; i < teamArray; i++) {
+    for(i = 0; i < teamArray; i++) {
         var newTeam = document.querySelectorAll(".member-input")[i].textContent;
         team.push(newTeam);
     }
 
-    var randomPick = Math.floor(Math.random() * team.length) + 1;
- 
+    var randnomPick = Math.floor(Math.random() * team.length) + 1 ;
+    var randnomPick2 = Math.floor(Math.random() * team.length) + 1 ;
+    var randnomPick3 = Math.floor(Math.random() * team.length) + 1 ;
+    var randnomPick4 = Math.floor(Math.random() * team.length) + 1 ;
+
     for (i = 0; i < 4; i++) {
-    document.getElementsByClassName("members")[0].textContent = `${team[randomPick-1]}`;
-    document.getElementsByClassName("members")[1].textContent = `${team[randomPick+1]}`;
-    document.getElementsByClassName("members")[2].textContent = `${team[randomPick]}`;
-    document.getElementsByClassName("members")[3].textContent = `${team[randomPick-2]}`;
+        document.getElementsByClassName("members")[0].textContent = `${team[randnomPick]}`;
+        document.getElementsByClassName("members")[1].textContent = `${team[randnomPick2]}`;
+        document.getElementsByClassName("members")[2].textContent = `${team[randnomPick3]}`;
+        document.getElementsByClassName("members")[3].textContent = `${team[randnomPick4]}`;
     }
 
     console.log(team);
-}
 
-function submitMember (name) {
+})
 
-        var getTeam = document.getElementById("input").value;
+document.querySelector(".submit").addEventListener("click", function(e){
 
-        newTeam = document.querySelector(".library-input").innerHTML += `<li class="member-input"> ${getTeam} </li>`;
+    submitMember(e.submit);
+
+})
+
+document.querySelector("#input").addEventListener("keydown", function(e){
+
+    if (e.key === "Enter") {
+        submitMember(e.submit)
+    }
+
+})
+
+function submitMember(submit) {
+    
+    var getTeam = document.getElementById("input").value;
+
+    var submitTeam = document.querySelector(".library-input").innerHTML += `<li class="member-input"> ${getTeam} </li>`;
+
+    submitTeam;
 
 }
