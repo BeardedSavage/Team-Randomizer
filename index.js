@@ -17,9 +17,11 @@ function whoServes() {
     document.getElementsByClassName("members")[2].textContent = `${team[randomPick]}`;
     document.getElementsByClassName("members")[3].textContent = `${team[randomPick-2]}`;
     }
+
+    console.log(team);
 }
 
-function submitMember() {
+function submitMember (name) {
 
         var getTeam = document.getElementById("input").value;
 
